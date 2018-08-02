@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *body;
 @property (weak, nonatomic) IBOutlet UILabel *headline;
+@property (weak, nonatomic) IBOutlet UIButton *outlineButton;
 
 @end
 
@@ -20,6 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:self.outlineButton.currentTitle];
+    
+    [title setAttributes:@{NSStrokeWidthAttributeName : @5,
+                           NSStrokeColorAttributeName : self.outlineButton.tintColor}
+                   range:NSMakeRange(0, [title length])];
+    [self.outlineButton setAttributedTitle:title forState:UIControlStateNormal];
+    
 }
 
 - (IBAction)changeBodySelectionBackgroundColor:(id)sender {
@@ -29,7 +38,7 @@
 
 }
 - (IBAction)outlineBodySelection:(id)sender {
-    [self.body.textStorage addAttributes:@{NSStrokeWidthAttributeName : @-3,
+    [self.body.textStorage addAttributes:@{NSStrokeWidthAttributeName : @10,
                                            NSStrokeColorAttributeName : [UIColor cyanColor]
                                            } range:self.body.selectedRange];
 }

@@ -19,8 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uyw-mN-Vwq">
-                                <rect key="frame" x="47" y="585" width="49" height="30"/>
+                                <rect key="frame" x="43" y="585" width="60" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Outline"/>
                                 <connections>
                                     <action selector="outlineBodySelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nWH-Td-rV8"/>
@@ -88,6 +89,7 @@
                     <connections>
                         <outlet property="body" destination="UFZ-OC-T7C" id="lDu-bc-MPI"/>
                         <outlet property="headline" destination="Ylb-oE-d3Y" id="E8f-FJ-tyW"/>
+                        <outlet property="outlineButton" destination="Uyw-mN-Vwq" id="a30-5B-WKz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
